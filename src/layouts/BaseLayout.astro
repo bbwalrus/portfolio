@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
-const pageTitle = "Brandon Leong's Portfolio";
+const { pageTitle } = Astro.props;
 ---
 <html lang="en">
   <head>
@@ -11,15 +11,11 @@ const pageTitle = "Brandon Leong's Portfolio";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <link rel="icon" type="image/x-icon" href="src/assets/logo.png">
   </head>
   <body>
     <Header />
-    <!-- <div class = "cover" />  -->
-    <div class = "title">Brandon Leong</div>
-    <div class = "subtitle">Full-Stack Developer</div>
-    <div class = "desc">I'm a developer currently studying at University of Washington Seattle.</div>
-    <div class = "about">About Me</div>
+    <h1>{pageTitle}</h1>
+    <slot />
     <Footer />
     <script>
       import "../scripts/menu.js";
