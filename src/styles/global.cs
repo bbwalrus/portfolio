@@ -116,50 +116,21 @@ body {
   background-image: linear-gradient(to right, #494a71, #7021bf);
 }
 
-.skilltitle{
-  font-size: 3.5rem;
-  color: #ffffff;
-  font-style: bold;
-  margin: auto;
-  width: 50%;
-  text-align: center;
-}
-
 .techicon{
-  border-radius: 15px;
-  background: #ffffff;
+  border-radius: 25px;
+  background: #bab5bf;
   padding: 20px;
-  margin: auto;
   width: 100px;
-  height: auto;
-  font-size: 1.2rem;
-  margin-top: 10px;
-  position: relative;
+  height: 125px;
+  font-size: 1rem;
+  text-align: center;
   display: inline-block;
 }
 
-.techtitle{
-  text-align: center;
-}
-
 .techlogo{
-  max-width: 60px;
-  max-height: 60px;
+  width: 50px;
+  height: 60px;
   display: flex;
-  margin: 0 auto;
-  padding: 5px;
-  position: relative;
-}
-
-.skills{
-  border-radius: 25px;
-  background: #494a71;
-  padding: 10px;
-  position: relative;
-  width: 75%;
-  max-width: 53.2rem;
-  margin: auto;
-  text-align: center;
 }
 
 .hover-underline-animation {

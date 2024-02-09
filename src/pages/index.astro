@@ -11,7 +11,7 @@ const pageTitle = "Brandon Leong's Portfolio";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <link rel="icon" type="image/x-icon" href="./src/assets/logo.png">
+    <link rel="icon" type="image/x-icon" href="../src/assets/logo.png">
   </head>
   <body>
     <Header />
@@ -19,10 +19,59 @@ const pageTitle = "Brandon Leong's Portfolio";
     <div class = "title">Brandon Leong</div>
     <div class = "subtitle">Full-Stack Developer</div>
     <div class = "desc">I'm a developer currently studying at University of Washington Seattle.</div>
-    <div class = "about">About Me</div>
-    <Footer />
+    <div class = "about" id = "about">
+      About Me
+      <p class = "aboutdesc">
+        Hi, I'm Brandon and am a class of 2027 student at UW. 
+        I'm interested in AI, ML, game development, and full stack applications. 
+        <br /> 
+        <br /> 
+        <!-- La musica delectus dolore fugiat exercitationem a, 
+        ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Harum non necessitatibus deleniti eum soluta. -->
+      </p>
+    </div>
+    <div class = "skilltitle">
+      Skills
+    </div>
+    <div class = "skills">
+      <div class = "techicon">
+        <img class = "techlogo" src ="../src/assets/python.png">
+        <div class = "techtitle"> Python</div>
+      </div>
+      <div class = "techicon" style="background-color: white;">
+        <img class = "techlogo" src ="../src/assets/java.png">
+        <div class = "techtitle"> Java</div>
+      </div>
+      <div class = "techicon" style="background-color: white;">
+        <img class = "techlogo" src ="../src/assets/html.png">
+        <div class = "techtitle"> HTML</div>
+      </div>
+      <div class = "techicon" style="background-color: white;">
+        <img class = "techlogo" src ="../src/assets/css.png">
+        <div class = "techtitle"> CSS</div>
+      </div>
+      <div class = "techicon" style="background-color: white;">
+        <img class = "techlogo" src ="../src/assets/java.png">
+        <div class = "techtitle" style = "font-size: 1.1rem"> JavaScript</div>
+      </div>
+      <div class = "techicon" style="background-color: white;">
+        <img class = "techlogo" src ="../src/assets/java.png">
+        <div class = "techtitle"> Netlify</div>
+      </div>
+      <div class = "techicon" style="background-color: white;">
+        <img class = "techlogo" src ="../src/assets/java.png">
+        <div class = "techtitle"> Figma</div>
+      </div>
+      <div class = "techicon" style="background-color: white;">
+        <img class = "techlogo" src ="../src/assets/java.png">
+        <div class = "techtitle"> Astro</div>
+      </div>
+    </div>
     <script>
       import "../scripts/menu.js";
+      import "../scripts/nav.js";
     </script>
   </body>
 </html>
