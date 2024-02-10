@@ -7,7 +7,7 @@ const pageTitle = "Brandon Leong's Portfolio";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
@@ -15,22 +15,29 @@ const pageTitle = "Brandon Leong's Portfolio";
   </head>
   <body>
     <Header />
-    <!-- <div class = "cover" />  -->
-    <div class = "title">Brandon Leong</div>
-    <div class = "subtitle">Full-Stack Developer</div>
-    <div class = "desc">I'm a developer currently studying at University of Washington Seattle.</div>
+    <section class = "cover">
+      <div class = "title">Hi, I'm </div>
+      <div class = "title" style = "color: rgb(167, 104, 231);">Brandon Leong</div>
+      <div class = "title">.</div>
+      <div class = "subtitle">
+        I'm a Full Stack Developer currently studying at UW Seattle.
+        <br>
+        Check out my resume here:
+      </div>
+    </section>
+    <!-- <div class = "desc">
+      I'm a full stack developer currently studying at University of Washington Seattle.
+      <br>
+      Check out my resume here: 
+    </div> -->
     <div class = "about" id = "about">
       About Me
       <p class = "aboutdesc">
-        Hi, I'm Brandon and am a class of 2027 student at UW. 
-        I'm interested in AI, ML, game development, and full stack applications. 
-        <br /> 
-        <br /> 
-        <!-- La musica delectus dolore fugiat exercitationem a, 
-        ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-        Harum non necessitatibus deleniti eum soluta. -->
-      </p>
+        Hello, I'm am a Class of 2027 student at the University of Washington Seattle
+        and a Software Engineer that's always eager to try new things and loves logic puzzles. 
+        My current interests include video games like Minecraft, Skyrim, and Stardew Valley where
+        coming up with new ideas means that I can mod them into the game myself. 
+      </p>  
     </div>
     <div class = "skilltitle">
       Skills
