@@ -1,14 +1,34 @@
 ---
-import Social from './Social.astro';
 ---
-<style>
-    footer {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+<script src="https://kit.fontawesome.com/12e57e898e.js" crossorigin="anonymous"></script>
 
-<footer>
-    <Social platform="github" username="bbwalrus" />
-</footer>
+<div class="socialbar" id = "socialbar">
+  <div class = "">
+    <a href="https://github.com/bbwalrus">
+      <i class="fa-brands fa-github socialbutton effect">
+        <div class = "popout effect">bbwalrus</div>
+      </i>
+    </a>
+  </div>
+  <div>
+    <a href="mailto:blazeleong@gmail.com">
+      <i class="fa-solid fa-envelope socialbutton effect">
+        <div class = "popout effect">blazeleong@gmail.com</div>
+      </i>
+    </a> 
+  </div>
+  <div>
+    <a href="tel:+16692914801">
+      <i class="fa-solid fa-phone socialbutton effect">
+        <div class = "popout effect">669-291-4801</div>
+      </i>
+    </a> 
+  </div>
+  <div>
+    <a href="">
+      <i class="fa-brands fa-linkedin socialbutton">
+        <div class = "popout effect"></div>
+      </i>
+    </a> 
+  </div>
+</div>

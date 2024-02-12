@@ -261,6 +261,53 @@ body {
   padding: 15px;
 }
 
+.socialbar{
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  position: fixed;
+  left: 15px;
+  bottom: 0px;
+  text-align: left;
+  display: grid;
+  width: 100%;
+  font-family: "Gill sans";
+}
+
+.social{
+  max-width: 50px;
+}
+
+.socialbutton{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  transition: all .3s ease-in-out; 
+}
+
+.socialbutton:hover { 
+  transform: scale(1.05);
+  margin-left: 1%;
+}
+
+.popout{
+  display: none;
+  color: white;
+  background-color: #2d2e47;
+  padding: 10px;
+  border-radius: 20px;
+  vertical-align: bottom;
+  font-size: 1.5rem;
+  transition: 0.5s ease-in-out;
+}
+
+.socialbutton:hover .effect{
+  display: inline-block;
+  font-family: 'Gill Sans';
+  font-weight: 400;
+}
+
 @media screen and (min-width: 1050px) {
   .projectcards{
     grid-template-columns: repeat(2,minmax(0,1fr));
