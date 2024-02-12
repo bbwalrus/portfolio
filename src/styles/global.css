@@ -87,9 +87,11 @@ body {
   background-image: linear-gradient(to right, #494a71, #7021bf);
   opacity: 100%;
   overflow: hidden;
-  padding-bottom: 0.5rem;
-  position:relative;
+  padding-bottom: 0rem;
+  position:absolute;
+  top: -20px;
   display: none;
+  width: 100%;
 }
 
 .nav-links a {
@@ -118,7 +120,6 @@ body {
 
 .expanded {
   display: block;
-  background-image: linear-gradient(to right, #494a71, #7021bf);
 }
 
 .skilltitle{
