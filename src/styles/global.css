@@ -17,6 +17,7 @@ body {
 .cover{
   margin-left: 13.3%;
   margin-right: 13.3%;
+  margin-top: 5rem;
 }
 
 .about{
@@ -297,7 +298,7 @@ body {
   padding: 10px;
   border-radius: 20px;
   vertical-align: bottom;
-  font-size: 1.5rem;
+  font-size: 1rem;
   transition: 0.5s ease-in-out;
 }
 
@@ -313,7 +314,7 @@ body {
   }
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 520px) {
   .nav-links {
     display: block;
     position: static;
@@ -347,6 +348,10 @@ body {
 
   .socialbutton{
     font-size: 2.5rem;
+  }
+
+  .popout{
+    font-size: 1.5rem;
   }
 
   .navbarreroute{
