@@ -262,6 +262,11 @@ body {
   padding: 15px;
 }
 
+.behind{
+  max-width: 50px;
+  overflow: visible;
+}
+
 .socialbar{
   margin-top: 5rem;
   margin-bottom: 1rem;
@@ -270,7 +275,7 @@ body {
   bottom: 0px;
   text-align: left;
   display: grid;
-  width: 100%;
+  width: 40px;
   font-family: "Gill sans";
 }
 
@@ -292,6 +297,10 @@ body {
   margin-left: 1%;
 }
 
+.socialbar:hover{
+  width:100%
+}
+
 .popout{
   display: none;
   color: white;
@@ -301,12 +310,18 @@ body {
   vertical-align: bottom;
   font-size: 1rem;
   transition: 0.5s ease-in-out;
+  pointer-events: none;
+  overflow: visible;
 }
 
 .socialbutton:hover .effect{
   display: inline-block;
   font-family: 'Gill Sans';
   font-weight: 400;
+}
+
+.behind:hover {
+  max-width: 100%;
 }
 
 @media screen and (min-width: 1050px) {
