@@ -16,7 +16,6 @@ body {
 
 .cover{
   margin-left: 13.3%;
-  padding-top: 15rem;
   margin-right: 13.3%;
 }
 
@@ -280,7 +279,7 @@ body {
 .socialbutton{
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: white;
   display: block;
   transition: all .3s ease-in-out; 
@@ -340,6 +339,14 @@ body {
     display: inline-block;
     font-size: 20px;
     opacity: 75%;
+  }
+
+  .cover{
+    padding-top: 15rem;
+  }
+
+  .socialbutton{
+    font-size: 2.5rem;
   }
 
   .navbarreroute{
