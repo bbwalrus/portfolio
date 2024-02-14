@@ -1,9 +1,10 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 const pageTitle = "Brandon Leong's Portfolio";
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,106 +15,122 @@ const pageTitle = "Brandon Leong's Portfolio";
   </head>
   <body>
     <Header />
-    <section class = "cover">
-      <div class = "title">Hi, I'm </div>
-      <div class = "title" style = "color: rgb(167, 104, 231);">Brandon Leong</div>
-      <div class = "title">.</div>
-      <div class = "subtitle">
+    <section class="cover">
+      <div class="title">Hi, I'm</div>
+      <div class="title" style="color: rgb(167, 104, 231);">Brandon Leong</div>
+      <div class="title">.</div>
+      <div class="subtitle">
         I'm a Full Stack Developer currently studying at UW Seattle.
-        <br>
+        <br />
         Check out my resume here:
-        <a href ="http://www.google.com">
-          <button type="button" class = "resume">Resume</button>
+        <a href="http://www.google.com">
+          <button type="button" class="resume">Resume</button>
         </a>
       </div>
     </section>
-    <div class = "about" id = "about">
+    <div class="about" id="about">
       About Me
-      <p class = "aboutdesc">
-        Hello, I'm a Class of 2027 student at the University of Washington Seattle
-        and a Software Engineer that's eager to try new things and loves logic puzzles. 
-        <br>
-        My current interests include video games from my childhood like Minecraft, Skyrim, 
-        and Stardew Valley where ever since I was young, 
-        coming up with new ideas meant that I could make mods to add them into the game myself. 
-      </p>  
+      <p class="aboutdesc">
+        Hello, I'm a Class of 2027 student at the University of Washington
+        Seattle and a Software Engineer that's eager to try new things and loves
+        logic puzzles.
+        <br />
+        My current interests include video games from my childhood like Minecraft,
+        Skyrim, and Stardew Valley where ever since I was young, coming up with new
+        ideas meant that I could make mods to add them into the game myself.
+      </p>
     </div>
-    <div class = "skilltitle">
-      Skills
+    <div class="skilltitle">Skills</div>
+    <div class="skills">
+      <div class="techicon">
+        <img class="techlogo" src="/assets/python.png" />
+        <div class="techtitle">Python</div>
+      </div>
+      <div class="techicon" style="background-color: white;">
+        <img class="techlogo" src="/assets/java.png" />
+        <div class="techtitle">Java</div>
+      </div>
+      <div class="techicon" style="background-color: white;">
+        <img class="techlogo" src="/assets/html.png" />
+        <div class="techtitle">HTML</div>
+      </div>
+      <div class="techicon" style="background-color: white;">
+        <img class="techlogo" src="/assets/css.png" />
+        <div class="techtitle">CSS</div>
+      </div>
+      <div class="techicon" style="background-color: white;">
+        <img class="techlogo" src="/assets/javascript.png" />
+        <div class="techtitle">JavaScript</div>
+      </div>
+      <div class="techicon" style="background-color: white;">
+        <img class="techlogo" src="/assets/netlify.png" />
+        <div class="techtitle">Netlify</div>
+      </div>
+      <div class="techicon" style="background-color: white;">
+        <img class="techlogo" src="/assets/figma.png" />
+        <div class="techtitle">Figma</div>
+      </div>
+      <div class="techicon" style="background-color: white;">
+        <img class="techlogo" src="/assets/astro.png" />
+        <div class="techtitle">Astro</div>
+      </div>
+      <div class="techicon" style="background-color: white;">
+        <img class="techlogo" src="/assets/react.png" />
+        <div class="techtitle">React</div>
+      </div>
     </div>
-    <div class = "skills">
-      <div class = "techicon">
-        <img class = "techlogo" src ="/assets/python.png">
-        <div class = "techtitle"> Python</div>
-      </div>
-      <div class = "techicon" style="background-color: white;">
-        <img class = "techlogo" src ="/assets/java.png">
-        <div class = "techtitle"> Java</div>
-      </div>
-      <div class = "techicon" style="background-color: white;">
-        <img class = "techlogo" src ="/assets/html.png">
-        <div class = "techtitle"> HTML</div>
-      </div>
-      <div class = "techicon" style="background-color: white;">
-        <img class = "techlogo" src ="/assets/css.png">
-        <div class = "techtitle"> CSS</div>
-      </div>
-      <div class = "techicon" style="background-color: white;">
-        <img class = "techlogo" src ="/assets/javascript.png">
-        <div class = "techtitle">JavaScript</div>
-      </div>
-      <div class = "techicon" style="background-color: white;">
-        <img class = "techlogo" src ="/assets/netlify.png">
-        <div class = "techtitle"> Netlify</div>
-      </div>
-      <div class = "techicon" style="background-color: white;">
-        <img class = "techlogo" src ="/assets/figma.png">
-        <div class = "techtitle"> Figma</div>
-      </div>
-      <div class = "techicon" style="background-color: white;">
-        <img class = "techlogo" src ="/assets/astro.png">
-        <div class = "techtitle"> Astro</div>
-      </div>
-    </div>
-    <div class = "projects">
-      <div class = "projecttitle" id = "projects">
-        Projects
-      </div>
-      <div class = "projectcards">
-        <div class = "card">
-          <h1 class = "cardtitle">
-            Example card
-          </h1>
+    <div class="projects">
+      <div class="projecttitle" id="projects">Projects</div>
+      <div class="projectcards">
+        <div class="card">
+          <h1 class="cardtitle">Example card</h1>
           <p>
-            Example description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Maecenas sed consequat purus. Vivamus rutrum urna ipsum, placerat egestas nisl tincidunt ac. 
-            Mauris ullamcorper, justo a lacinia aliquam, massa enim hendrerit quam, ut interdum ligula leo quis purus. 
-            Integer dapibus sollicitudin lorem, vel tristique arcu porttitor quis. 
-            Pellentesque tincidunt cursus aliquam. Integer laoreet massa sem, eget efficitur nulla dictum id. 
-            Suspendisse et dui efficitur, porta est condimentum, mollis nibh. Sed egestas eget nibh id consectetur. 
-            Mauris vitae semper magna. Pellentesque quis tristique dolor.
+            Example description. Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Maecenas sed consequat purus. Vivamus rutrum urna
+            ipsum, placerat egestas nisl tincidunt ac. Mauris ullamcorper, justo
+            a lacinia aliquam, massa enim hendrerit quam, ut interdum ligula leo
+            quis purus. Integer dapibus sollicitudin lorem, vel tristique arcu
+            porttitor quis. Pellentesque tincidunt cursus aliquam. Integer
+            laoreet massa sem, eget efficitur nulla dictum id. Suspendisse et
+            dui efficitur, porta est condimentum, mollis nibh. Sed egestas eget
+            nibh id consectetur. Mauris vitae semper magna. Pellentesque quis
+            tristique dolor.
           </p>
         </div>
-        <div class = "card">
-          <h1 class = "cardtitle">
-            Example card
-          </h1>
+        <div class="card">
+          <h1 class="cardtitle">Algorithm Visualizer</h1>
           <p>
-            Example description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Maecenas sed consequat purus. Vivamus rutrum urna ipsum, placerat egestas nisl tincidunt ac. 
-            Mauris ullamcorper, justo a lacinia aliquam, massa enim hendrerit quam, ut interdum ligula leo quis purus. 
-            Integer dapibus sollicitudin lorem, vel tristique arcu porttitor quis. 
-            Pellentesque tincidunt cursus aliquam. Integer laoreet massa sem, eget efficitur nulla dictum id. 
-            Suspendisse et dui efficitur, porta est condimentum, mollis nibh. Sed egestas eget nibh id consectetur. 
-            Mauris vitae semper magna. Pellentesque quis tristique dolor.
+            This website uses basic React to simulate Dijkstra's Algorithm with
+            visualized nodes. Dijkstra's Algorithm is an method to find the
+            shortest path between nodes. I had a hard time understanding this
+            concept at first, so making this project was a fun and engaging way
+            to boost my comprehension of the topic allowing myself and the
+            students I tutored to gain a better understanding of Dijkstra's
+            Algorithm.
           </p>
+          <a
+            href="https://algorithmvisualizer-bleong.netlify.app"
+            target="_blank"
+            class="cardlink"
+          >
+            Check it out!
+          </a>
+          <a
+            href="https://github.com/bbwalrus/dijkstras-algorithm-visualizer"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github cardgithub"></i>
+          </a>
         </div>
       </div>
+      <script>
+        import "../scripts/menu.js";
+        import "../scripts/nav.js";
+      </script>
+      <script
+        src="https://kit.fontawesome.com/12e57e898e.js"
+        crossorigin="anonymous"></script>
     </div>
-    <script>
-      import "../scripts/menu.js";
-      import "../scripts/nav.js";
-    </script>
+    <Footer />
   </body>
-  <Footer/>
 </html>

@@ -163,6 +163,30 @@ body {
   position: relative;
   text-align: left;
   transition: all .3s ease-in-out; 
+  font-size: 18px;
+}
+
+.cardtitle{
+  font-weight: 600;
+}
+
+.cardlink{
+  color: white;
+  display: inline-block;
+}
+
+.cardgithub{
+  font-size: 3rem;
+  float: right;
+  color: white;
+}
+
+.cardgithub:hover{
+  color: #c3a3ee;
+}
+
+.cardlink:hover{
+  color:#c3a3ee;
 }
 
 .resume{
