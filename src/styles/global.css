@@ -14,13 +14,13 @@ body {
   padding: 0;
 }
 
-.cover{
+.cover {
   margin-left: 13.3%;
   margin-right: 13.3%;
   margin-top: 5rem;
 }
 
-.about{
+.about {
   margin-top: 20rem;
   padding-top: 5rem;
   color: #ffffff;
@@ -30,7 +30,7 @@ body {
   text-align: center;
 }
 
-.aboutdesc{
+.aboutdesc {
   text-align: left;
   font-size: 1.5rem;
 }
@@ -56,7 +56,7 @@ body {
   font-style: bold;
 }
 
-.desc{
+.desc {
   font-size: 1rem;
   color: #ffffff;
   font-style: bold;
@@ -68,7 +68,7 @@ body {
 .hamburger {
   padding-left: 5px;
   cursor: pointer;
-  padding-bottom:10px;
+  padding-bottom: 10px;
   padding-top: 0;
   position: relative;
   z-index: 2;
@@ -88,7 +88,7 @@ body {
   opacity: 100%;
   overflow: hidden;
   padding-bottom: 0rem;
-  position:absolute;
+  position: absolute;
   top: -20px;
   display: none;
   width: 100%;
@@ -100,20 +100,22 @@ body {
   text-decoration: none;
   font-size: 1rem;
   height: 2.3rem;
-  color:#d2d0d8;
+  color: #d2d0d8;
   text-align: center;
   opacity: 100%;
 }
 
-.right{
+.right {
   float: none;
 }
 
-.nav-links:hover, a:focus {
+.nav-links:hover,
+a:focus {
   opacity: 100%;
 }
 
-.nav-links a:hover, a:focus {
+.nav-links a:hover,
+a:focus {
   color: #ffffff;
   opacity: 100%;
 }
@@ -122,7 +124,7 @@ body {
   display: block;
 }
 
-.skilltitle{
+.skilltitle {
   font-size: 3.5rem;
   color: #ffffff;
   font-style: bold;
@@ -131,7 +133,7 @@ body {
   text-align: center;
 }
 
-.projecttitle{
+.projecttitle {
   font-size: 3.5rem;
   color: #ffffff;
   font-style: bold;
@@ -141,55 +143,55 @@ body {
   padding-top: 5rem;
 }
 
-.projects{
+.projects {
   width: 80%;
   max-width: 75rem;
   margin: auto;
   text-align: center;
 }
 
-.projectcards{
-  grid-template-columns: repeat(1,minmax(0,1fr));
+.projectcards {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   display: grid;
 }
 
-.card{
+.card {
   background: #494a71;
   border-radius: 15px;
   display: inline-block;
   padding: 20px;
-  color: #ffffff; 
+  color: #ffffff;
   margin: 20px;
   position: relative;
   text-align: left;
-  transition: all .3s ease-in-out; 
+  transition: all .3s ease-in-out;
   font-size: 18px;
 }
 
-.cardtitle{
+.cardtitle {
   font-weight: 600;
 }
 
-.cardlink{
+.cardlink {
   color: white;
   display: inline-block;
 }
 
-.cardgithub{
+.cardgithub {
   font-size: 3rem;
   float: right;
   color: white;
 }
 
-.cardgithub:hover{
+.cardgithub:hover {
   color: #c3a3ee;
 }
 
-.cardlink:hover{
-  color:#c3a3ee;
+.cardlink:hover {
+  color: #c3a3ee;
 }
 
-.resume{
+.resume {
   background-color: var(--main-background);
   border-radius: 10px;
   color: #ffffff;
@@ -197,20 +199,20 @@ body {
   padding: 8px 24px;
   margin: 10px;
   cursor: pointer;
-  font-family:Verdana;
+  font-family: Verdana;
   font-size: 1.2rem;
 }
 
-.card:hover{
-  transform: scale(1.01); 
+.card:hover {
+  transform: scale(1.01);
 }
 
-.techicon:hover { 
-  transform: scale(1.06); 
+.techicon:hover {
+  transform: scale(1.06);
 }
 
-.techicon{
-  transition: all .3s ease-in-out; 
+.techicon {
+  transition: all .3s ease-in-out;
   border-radius: 15px;
   background: #ffffff;
   padding: 10px;
@@ -226,11 +228,11 @@ body {
   display: inline-block;
 }
 
-.techtitle{
+.techtitle {
   text-align: center;
 }
 
-.techlogo{
+.techlogo {
   width: 60px;
   height: 70px;
   display: flex;
@@ -239,9 +241,11 @@ body {
   position: relative;
   overflow: hidden;
   margin-top: 10px;
+  object-fit: cover;
+  overflow: visible;
 }
 
-.skills{
+.skills {
   border-radius: 25px;
   background: #494a71;
   padding: 10px;
@@ -277,7 +281,7 @@ body {
   transform-origin: bottom left;
 }
 
-.navlogo{
+.navlogo {
   display: inline;
   height: 10px;
   width: 10px;
@@ -286,12 +290,12 @@ body {
   padding: 15px;
 }
 
-.behind{
+.behind {
   max-width: 50px;
   overflow: visible;
 }
 
-.socialbar{
+.socialbar {
   margin-top: 5rem;
   margin-bottom: 1rem;
   position: fixed;
@@ -303,29 +307,29 @@ body {
   font-family: "Gill sans";
 }
 
-.social{
+.social {
   max-width: 50px;
 }
 
-.socialbutton{
+.socialbutton {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 1.5rem;
   color: white;
   display: block;
-  transition: all .3s ease-in-out; 
+  transition: all .3s ease-in-out;
 }
 
-.socialbutton:hover { 
+.socialbutton:hover {
   transform: scale(1.05);
   margin-left: 1%;
 }
 
-.socialbar:hover{
-  width:100%
+.socialbar:hover {
+  width: 100%
 }
 
-.popout{
+.popout {
   display: none;
   color: white;
   background-color: #2d2e47;
@@ -338,7 +342,7 @@ body {
   overflow: visible;
 }
 
-.socialbutton:hover .effect{
+.socialbutton:hover .effect {
   display: inline-block;
   font-family: 'Gill Sans';
   font-weight: 400;
@@ -349,8 +353,8 @@ body {
 }
 
 @media screen and (min-width: 1050px) {
-  .projectcards{
-    grid-template-columns: repeat(2,minmax(0,1fr));
+  .projectcards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -372,7 +376,7 @@ body {
   }
 
   /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
+  .sticky+.content {
     padding-top: 60px;
   }
 
@@ -382,24 +386,24 @@ body {
     opacity: 75%;
   }
 
-  .cover{
+  .cover {
     padding-top: 15rem;
   }
 
-  .socialbutton{
+  .socialbutton {
     font-size: 2.5rem;
   }
 
-  .popout{
+  .popout {
     font-size: 1.5rem;
   }
 
-  .navbarreroute{
+  .navbarreroute {
     padding-top: 0.6rem;
     margin-right: 1rem;
   }
 
-  .right{
+  .right {
     float: right;
   }
 
@@ -407,7 +411,7 @@ body {
     display: none;
   }
 
-  .navlogo{
+  .navlogo {
     width: 50px;
     height: 50px;
     display: block;
