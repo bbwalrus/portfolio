@@ -157,6 +157,7 @@ a:focus {
 }
 
 .projectcards {
+  margin-top: 2%;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   display: grid;
 }
@@ -164,14 +165,31 @@ a:focus {
 .card {
   background: #494a71;
   border-radius: 15px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
   color: #ffffff;
-  margin: 20px;
-  position: relative;
   text-align: left;
   transition: all .3s ease-in-out;
   font-size: 18px;
+  margin-top: auto;
+  flex: 1;
+  height: 100%;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card-container {
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 20px;
 }
 
 .cardtitle {

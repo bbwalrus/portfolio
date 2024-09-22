@@ -90,74 +90,88 @@ const pageTitle = "Brandon Leong's Portfolio";
     <div class="projects">
       <div class="projecttitle" id="projects">Personal Projects</div>
       <div class="projectcards">
-        <!-- <div class="card">
-          <h1 class="cardtitle">Example card</h1>
-          <p>
-            Example description. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Maecenas sed consequat purus. Vivamus rutrum urna
-            ipsum, placerat egestas nisl tincidunt ac. Mauris ullamcorper, justo
-            a lacinia aliquam, massa enim hendrerit quam, ut interdum ligula leo
-            quis purus. Integer dapibus sollicitudin lorem, vel tristique arcu
-            porttitor quis. Pellentesque tincidunt cursus aliquam. Integer
-            laoreet massa sem, eget efficitur nulla dictum id. Suspendisse et
-            dui efficitur, porta est condimentum, mollis nibh. Sed egestas eget
-            nibh id consectetur. Mauris vitae semper magna. Pellentesque quis
-            tristique dolor.
-          </p>
-        </div> -->
-        <div class="card">
-          <h1 class="cardtitle">Sudoku Player</h1>
-          <img src="/assets/sudoku.png" alt="Algorithm Visualizer" class="cardimage"/>
-          <p>
-            A standard game of sudoku playable on the website. Comes with multiple difficulties, 
-            a timer, and themes. Uses HTML, CSS, and JS for functionality. 
-            Includes with a solve button that utilizes a backtracking algorithm
-            in order to fill out the rest of the sudoku. 
-            <br/>
-            <br/>
-            <br/>
-          </p>
-          <a
-          href="https://sudoku-bleong.netlify.app"
-          target="_blank"
-          class="cardlink"
-        >
-          Check it out!
-        </a>
-        <a
-          href="https://github.com/bbwalrus/sudoku"
-          target="_blank"
-        >
-          <i class="fa-brands fa-github cardgithub"></i>
-        </a>
+        <div class="card-container">
+          <div class="card">
+            <h1 class="cardtitle">Handtracking Game</h1>
+            <img src="/assets/handtracking.png" alt="Hand Tracking Game" class="cardimage"/>
+            <p>
+              A game made in python with PyGame, OpenCV, and Google's MediaPipe to create a
+              game where a ball bounces off of lines drawn between your index fingers and thumbs
+              where the goal is to get the ball to hit the star 10 times as fast as possible.
+            </p>
+            <div class="card-actions">
+              <a
+              href="https://github.com/bbwalrus/hand-tracking-game"
+              target="_blank"
+                class="cardlink"
+              >
+                Check it out!
+              </a>
+              <a
+                href="https://github.com/bbwalrus/hand-tracking-game"
+                target="_blank"
+                class="cardgithub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <h1 class="cardtitle">Algorithm Visualizer</h1>
-          <img src="/assets/algovis.png" alt="Algorithm Visualizer" class="cardimage"/>
-          <p>
-            This website uses basic React to simulate Dijkstra's Algorithm with
-            visualized nodes. Dijkstra's Algorithm is an method to find the
-            shortest path between nodes. I had a hard time understanding this
-            concept at first, so making this project was a fun and engaging way
-            to boost my comprehension of the topic allowing myself and the
-            students I tutored to gain a better understanding of Dijkstra's
-            Algorithm.
-          </p>
-          <a
-            href="https://algorithmvisualizer-bleong.netlify.app"
-            target="_blank"
-            class="cardlink"
-          >
-            Check it out!
-          </a>
-          <a
-            href="https://github.com/bbwalrus/dijkstras-algorithm-visualizer"
-            target="_blank"
-          >
-            <i class="fa-brands fa-github cardgithub"></i>
-          </a>
+          <div class="card-container">
+            <div class="card">
+              <h1 class="cardtitle">Sudoku Player</h1>
+              <img src="assets/sudoku.png" alt="Sudoku Game" class="cardimage"/>
+              <p>
+                A standard game of sudoku playable on the website. Comes with multiple difficulties, 
+                a timer, and themes. Uses HTML, CSS, and JS for functionality. 
+                Includes with a solve button that utilizes a backtracking algorithm
+                in order to fill out the rest of the sudoku. 
+              </p>
+              <div class="card-actions">
+                <a
+                  href="https://sudoku-bleong.netlify.app"
+                  target="_blank"
+                  class="cardlink"
+                >
+                  Check it out!
+                </a>
+                <a
+                  href="https://github.com/bbwalrus/sudoku"
+                  target="_blank"
+                  class="cardgithub"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        <div class="card-container">
+          <div class="card">
+            <h1 class="cardtitle">Algorithm Visualizer</h1>
+            <img src="assets/algovis.png" alt="Algorithm Visualizer" class="cardimage"/>
+            <p>
+              This website uses basic React to simulate Dijkstra's Algorithm with
+              visualized nodes. Dijkstra's Algorithm is a method to find the shortest
+              path between nodes.
+            </p>
+            <div class="card-actions">
+              <a
+                href="https://algorithmvisualizer-bleong.netlify.app"
+                target="_blank"
+                class="cardlink"
+              >
+                Check it out!
+              </a>
+              <a
+                href="https://github.com/bbwalrus/dijkstras-algorithm-visualizer"
+                target="_blank"
+                class="cardgithub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
       <script>
         import "../scripts/menu.js";
         import "../scripts/nav.js";
