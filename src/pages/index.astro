@@ -2,7 +2,99 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+
 const pageTitle = "Brandon Leong's Portfolio";
+
+// Organized skills data with Simple Icons CDN and custom PNG support
+const skills = {
+  languages: [
+    { name: "Python", icon: "python", type: "simple" },
+    { name: "Java", icon: "./assets/java.png", type: "custom" },
+    { name: "JavaScript", icon: "javascript", type: "simple" },
+    { name: "Dart", icon: "dart", type: "simple" },
+    { name: "HTML", icon: "html5", type: "simple" },
+    { name: "CSS", icon: "./assets/css.png", type: "custom" },
+    { name: "C++", icon: "cplusplus", type: "simple" },
+    { name: "SQL", icon: "mysql", type: "simple" },
+    { name: "R", icon: "r", type: "simple" },
+  ],
+  frameworks: [
+    { name: "React", icon: "react", type: "simple" },
+    { name: "Astro", icon: "astro", type: "simple" },
+    { name: "Flutter", icon: "flutter", type: "simple" },
+    { name: "Streamlit", icon: "streamlit", type: "simple" },
+    { name: "OpenCV", icon: "opencv", type: "simple" },
+    { name: "Tailwind CSS", icon: "tailwindcss", type: "simple" },
+    { name: "Node.js", icon: "nodedotjs", type: "simple" },
+    { name: "Express.js", icon: "express", type: "simple" },
+    { name: "Flask", icon: "flask", type: "simple" },
+    { name: "FastAPI", icon: "fastapi", type: "simple" }
+  ],
+  tools: [
+    { name: "Git", icon: "git", type: "simple" },
+    { name: "VS Code", icon: "./assets/vscode.png", type: "custom" },
+    { name: "Figma", icon: "figma", type: "simple" },
+    { name: "Netlify", icon: "netlify", type: "simple" },
+    { name: "MySQL", icon: "mysql", type: "simple" },
+    { name: "MongoDB", icon: "mongodb", type: "simple" },
+    { name: "Redis", icon: "redis", type: "simple" },
+    { name: "Jupyter Notebook", icon: "jupyter", type: "simple" },
+    { name: "PyCharm", icon: "pycharm", type: "simple" },
+    { name: "Xcode", icon: "xcode", type: "simple" }
+  ]
+};
+
+// Helper function to get icon URL (note: this will be replaced with inline logic in the template)
+
+// Project data for better organization
+const projects = [
+  {
+    title: "Redis Server Implementation",
+    image: "/assets/redis.png",
+    description: "A high-performance Redis server implementation built in C++ that supports core Redis functionality including key-value operations, lists, and hash data structures. Features thread-safe operations with mutex locking, multiple data type support, and full compatibility with Redis client protocols. Demonstrates systems programming, concurrent data structures, and network protocol implementation.",
+    liveUrl: "https://github.com/bbwalrus/redis",
+    githubUrl: "https://github.com/bbwalrus/redis"
+  },
+  {
+    title: "Options Price Visualizer",
+    image: "/assets/optionspricer.png",
+    description: "An interactive web app that allows users to price European and American options using three popular models: Black-Scholes, Binomial Tree, and Monte Carlo simulation. Users can adjust parameters such as strike price, volatility, time to maturity, and risk-free rate via sliders, and visualize option prices across different strikes.",
+    liveUrl: "https://bleongoptionspricer.streamlit.app/",
+    githubUrl: "https://github.com/bbwalrus/optionspricer"
+  },
+  {
+    title: "Eatvolution",
+    image: "/assets/eatvolution.png",
+    description: "A fitness and nutrition app that allows users to log daily meals, track calorie intake, and set personalized nutrition goals tailored to their fitness objectives. It offers access to a curated database of healthy recipes based on various dietary preferences, while also providing users with detailed progress monitoring through visual graphs and statistics. Additionally, the app includes a built-in AI trainer powered by Perplexity AI for personalized advice and goal-setting and fosters community engagement by allowing users to connect with others for support and motivation.",
+    liveUrl: "https://eatvolution-frontend.onrender.com/",
+    githubUrl: "https://github.com/SamGanYX/Dubhacks2024",
+    additionalLink: {
+      text: "Check out the hackathon page here",
+      url: "https://devpost.com/software/temp-title-ayo482"
+    }
+  },
+  {
+    title: "Handtracking Game",
+    image: "/assets/handtracking.png",
+    description: "A game made in python with PyGame, OpenCV, and Google's MediaPipe to create a game where a ball bounces off of lines drawn between your index fingers and thumbs where the goal is to get the ball to hit the star 10 times as fast as possible.",
+    liveUrl: "https://github.com/bbwalrus/hand-tracking-game",
+    githubUrl: "https://github.com/bbwalrus/hand-tracking-game"
+  },
+  {
+    title: "Sudoku Player",
+    image: "/assets/sudoku.png",
+    description: "A standard game of sudoku playable on the website. Comes with multiple difficulties, a timer, and themes. Uses HTML, CSS, and JS for functionality. Includes with a solve button that utilizes a backtracking algorithm in order to fill out the rest of the sudoku.",
+    liveUrl: "https://sudoku-bleong.netlify.app",
+    githubUrl: "https://github.com/bbwalrus/sudoku"
+  },
+  {
+    title: "Algorithm Visualizer",
+    image: "/assets/algovis.png",
+    description: "This website uses basic React to simulate Dijkstra's Algorithm with visualized nodes. Dijkstra's Algorithm is a method to find the shortest path between nodes.",
+    liveUrl: "https://algorithmvisualizer-bleong.netlify.app",
+    githubUrl: "https://github.com/bbwalrus/dijkstras-algorithm-visualizer"
+  }
+];
 ---
 
 <html lang="en">
@@ -12,259 +104,136 @@ const pageTitle = "Brandon Leong's Portfolio";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <!-- No external icon libraries needed - using Simple Icons CDN directly -->
   </head>
   <body>
     <Header />
+    
+    <!-- Hero Section -->
     <section class="cover">
-      <div class="title">Hi, I'm&nbsp</div>
-      <div class="title" style="color: rgb(167, 104, 231);">Brandon Leong</div>
-      <div class="title">.</div>
-      <div class="subtitle">
-        I'm a Full Stack Developer currently studying at UW Seattle.
-        <br />
-        Check out my resume here:
-        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
-          <button type="button" class="resume">Resume</button>
-        </a>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title">Hi, I'm&nbsp;</span>
+          <span class="title highlight">Brandon Leong</span>
+          <span class="title">.</span>
+        </h1>
+        <div class="subtitle">
+          I'm a Full Stack Developer and Data Scientist currently studying at UW Seattle.
+          <br />
+          Check out my resume here:
+          <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <button type="button" class="resume">Resume</button>
+          </a>
+        </div>
       </div>
     </section>
-    <div class="about" id="about">
-      About Me
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2 class="section-title">About Me</h2>
       <p class="aboutdesc">
-        Hello, I'm a Class of 2027 student at the University of Washington
+        Hello, I'm a Class of 2026 student at the University of Washington
         Seattle and a Software Engineer that's eager to try new things and loves
         logic puzzles.
         <br />
         My current interests include video games from my childhood like Minecraft,
-        Skyrim, and Stardew Valley where ever since I was young, coming up with new
-        ideas meant that I could make mods to add them into the game myself.
+        Skyrim, and Stardew Valley as ever since I was young, coming up with new
+        ideas meant that I could bring them to life in these games through mods. 
       </p>
-    </div>
-    <div class="skilltitle">Skills</div>
-    <div class="skills">
-      <div class="techicon">
-        <img class="techlogo" src="/assets/python.png" />
-        <div class="techtitle">Python</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/java.png" />
-        <div class="techtitle">Java</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/html.png" />
-        <div class="techtitle">HTML</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/css.png" />
-        <div class="techtitle">CSS</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/javascript.png" />
-        <div class="techtitle">JavaScript</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/netlify.png" />
-        <div class="techtitle">Netlify</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/figma.png" />
-        <div class="techtitle">Figma</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/astro.png" />
-        <div class="techtitle">Astro</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/react.png" />
-        <div class="techtitle">React</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/flutter.png" />
-        <div class="techtitle">Flutter</div>
-      </div>
-      <div class="techicon" style="background-color: white;">
-        <img class="techlogo" src="/assets/dart.png" />
-        <div class="techtitle">Dart</div>
-      </div>
-    </div>
-    <div class="projects">
-      <div class="projecttitle" id="projects">Projects</div>
-      <div class="projectcards">
-        <div class="card-container">
-          <div class="card">
-            <h1 class="cardtitle">Redis Server Implementation</h1>
-            <img src="/assets/redis.png" alt="Redis Server Screenshot" class="cardimage"/>
-            <p>
-              A high-performance Redis server implementation built in C++ that supports core Redis functionality including
-              key-value operations, lists, and hash data structures. Features thread-safe operations with mutex locking,
-              multiple data type support, and full compatibility with Redis client protocols.
-              Demonstrates systems programming, concurrent data structures, and network protocol implementation.
-            </p>
-            <div class="card-actions">
-              <a
-                href="https://github.com/bbwalrus/redis"
-                target="_blank"
-                class="cardlink"
-              >
-                Check it out!
-              </a>
-              <a
-                href="https://github.com/bbwalrus/redis"
-                target="_blank"
-                class="cardgithub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <h2 class="section-title">Skills</h2>
+      
+      <div class="skills-container">
+        <!-- Programming Languages -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Programming Languages</h3>
+          <div class="skills-grid">
+            {skills.languages.map((skill) => (
+              <div class="skill-item">
+                <img class="skill-icon" src={skill.type === "custom" ? skill.icon : `https://cdn.simpleicons.org/${skill.icon}`} alt={skill.name} />
+                <span class="skill-name">{skill.name}</span>
+              </div>
+            ))}
           </div>
+          <div class="scroll-hint">← Drag to scroll or use mouse wheel →</div>
         </div>
-        <div class="card-container">
-          <div class="card">
-            <h1 class="cardtitle">Options Price Visualizer</h1>
-            <img src="/assets/optionspricer.png" alt="Options Price Visualizer Screenshot" class="cardimage"/>
-            <p>
-              An interactive web app that allows users to price European and American options using three popular models:
-              Black-Scholes, Binomial Tree, and Monte Carlo simulation.
-              Users can adjust parameters such as strike price, volatility, time to maturity, and risk-free rate via sliders,
-              and visualize option prices across different strikes.
-            </p>
-            <div class="card-actions">
-              <a
-                href="https://bleongoptionspricer.streamlit.app/"
-                target="_blank"
-                class="cardlink"
-              >
-                Check it out!
-              </a>
-              <a
-                href="https://github.com/bbwalrus/optionspricer"
-                target="_blank"
-                class="cardgithub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
+
+        <!-- Frameworks & Libraries -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Frameworks & Libraries</h3>
+          <div class="skills-grid">
+            {skills.frameworks.map((skill) => (
+              <div class="skill-item">
+                <img class="skill-icon" src={skill.type === "custom" ? skill.icon : `https://cdn.simpleicons.org/${skill.icon}`} alt={skill.name} />
+                <span class="skill-name">{skill.name}</span>
+              </div>
+            ))}
           </div>
+          <div class="scroll-hint">← Drag to scroll or use mouse wheel →</div>
         </div>
-        <div class="card-container">
-          <div class="card">
-            <h1 class="cardtitle">Eatvolution</h1>
-            <img src="/assets/eatvolution.png" alt="Eatvolution Front Page" class="cardimage"/>
-            <p>
-              A fitness and nutrition app that allows users to log daily meals, track calorie intake, and set personalized nutrition goals tailored to their fitness objectives.
-              It offers access to a curated database of healthy recipes based on various dietary preferences, while also providing users with detailed progress monitoring through visual graphs and statistics. 
-              Additionally, the app includes a built-in AI trainer powered by Perplexity AI for personalized advice and goal-setting 
-              and fosters community engagement by allowing users to connect with others for support and motivation.
-              <a href="https://devpost.com/software/temp-title-ayo482" target="_blank">Check out the hackathon page.</a>.
-            </p>
-            <div class="card-actions">
-              <a
-              href="https://eatvolution-frontend.onrender.com/"
-              target="_blank"
-                class="cardlink"
-              >
-                Check it out!
-              </a>
-              <a
-                href="https://github.com/SamGanYX/Dubhacks2024"
-                target="_blank"
-                class="cardgithub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-category">
+          <h3 class="skill-category-title">Tools & Platforms</h3>
+          <div class="skills-grid">
+            {skills.tools.map((skill) => (
+              <div class="skill-item">
+                <img class="skill-icon" src={skill.type === "custom" ? skill.icon : `https://cdn.simpleicons.org/${skill.icon}`} alt={skill.name} />
+                <span class="skill-name">{skill.name}</span>
+              </div>
+            ))}
           </div>
+          <div class="scroll-hint">← Drag to scroll or use mouse wheel →</div>
         </div>
-        <div class="card-container">
-          <div class="card">
-            <h1 class="cardtitle">Handtracking Game</h1>
-            <img src="/assets/handtracking.png" alt="Hand Tracking Game" class="cardimage"/>
-            <p>
-              A game made in python with PyGame, OpenCV, and Google's MediaPipe to create a
-              game where a ball bounces off of lines drawn between your index fingers and thumbs
-              where the goal is to get the ball to hit the star 10 times as fast as possible.
-            </p>
-            <div class="card-actions">
-              <a
-              href="https://github.com/bbwalrus/hand-tracking-game"
-              target="_blank"
-                class="cardlink"
-              >
-                Check it out!
-              </a>
-              <a
-                href="https://github.com/bbwalrus/hand-tracking-game"
-                target="_blank"
-                class="cardgithub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        {projects.map((project) => (
+          <article class="project-card">
+            <div class="card-image-container">
+              <img src={project.image} alt={`${project.title} Screenshot`} class="card-image" />
             </div>
-          </div>
-        </div>
-          <div class="card-container">
-            <div class="card">
-              <h1 class="cardtitle">Sudoku Player</h1>
-              <img src="assets/sudoku.png" alt="Sudoku Game" class="cardimage"/>
-              <p>
-                A standard game of sudoku playable on the website. Comes with multiple difficulties, 
-                a timer, and themes. Uses HTML, CSS, and JS for functionality. 
-                Includes with a solve button that utilizes a backtracking algorithm
-                in order to fill out the rest of the sudoku. 
+            <div class="card-content">
+              <h3 class="card-title">{project.title}</h3>
+              <p class="card-description">
+                {project.description}
+                {project.additionalLink && (
+                  <Fragment>
+                    {" "}
+                    <a href={project.additionalLink.url} target="_blank" rel="noopener noreferrer" class="additional-link">
+                      {project.additionalLink.text}
+                    </a>
+                    .
+                  </Fragment>
+                )}
               </p>
               <div class="card-actions">
-                <a
-                  href="https://sudoku-bleong.netlify.app"
-                  target="_blank"
-                  class="cardlink"
-                >
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" class="card-link">
                   Check it out!
                 </a>
-                <a
-                  href="https://github.com/bbwalrus/sudoku"
-                  target="_blank"
-                  class="cardgithub"
-                >
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" class="card-github">
                   <i class="fa-brands fa-github"></i>
                 </a>
               </div>
             </div>
-          </div>
-        <div class="card-container">
-          <div class="card">
-            <h1 class="cardtitle">Algorithm Visualizer</h1>
-            <img src="assets/algovis.png" alt="Algorithm Visualizer" class="cardimage"/>
-            <p>
-              This website uses basic React to simulate Dijkstra's Algorithm with
-              visualized nodes. Dijkstra's Algorithm is a method to find the shortest
-              path between nodes.
-            </p>
-            <div class="card-actions">
-              <a
-                href="https://algorithmvisualizer-bleong.netlify.app"
-                target="_blank"
-                class="cardlink"
-              >
-                Check it out!
-              </a>
-              <a
-                href="https://github.com/bbwalrus/dijkstras-algorithm-visualizer"
-                target="_blank"
-                class="cardgithub"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      <script>
-        import "../scripts/menu.js";
-        import "../scripts/nav.js";
-      </script>
-      <script
-        src="https://kit.fontawesome.com/12e57e898e.js"
-        crossorigin="anonymous"></script>
-    </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
     <Footer />
+
+    <!-- Scripts -->
+    <script src="../scripts/menu.js"></script>
+    <script src="../scripts/nav.js"></script>
+    <script src="../scripts/scrollable-skills.js"></script>
+    <script src="https://kit.fontawesome.com/12e57e898e.js" crossorigin="anonymous"></script>
   </body>
 </html>
