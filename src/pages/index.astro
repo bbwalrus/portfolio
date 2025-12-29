@@ -44,10 +44,22 @@ const skills = {
   ]
 };
 
-// Helper function to get icon URL (note: this will be replaced with inline logic in the template)
-
 // Project data for better organization
 const projects = [
+  {
+    title: "Midas Core Financial System",
+    image: "/assets/midascore.png",
+    description: "A high-throughput financial transaction engine developed during a JPMC Software Engineering program. The system processes real-time financial data using Apache Kafka for asynchronous message handling and ensures data integrity through a SQL database (H2/JPA). Features include automated transaction validation based on user balance and ID verification, a decoupled REST API integration for dynamic incentive calculation, and a GET endpoint for real-time balance queries. The project leverages Spring Boot's dependency injection and embedded Kafka for robust, scalable backend performance.",
+    liveUrl: "https://www.theforage.com/simulations/jpmorgan/advanced-software-engineering-r0fm?reloaded=true",
+    githubUrl: "https://github.com/bbwalrus/forage-midas"
+  },
+  {
+    title: "League of Legends Team Balancer",
+    image: "/assets/leaguebalancer.png",
+    description: "A custom League of Legends analysis and team balancing tool. Uses each player's score in every role across game types such as normals, ranked, and swiftplays. Creates FIFA card-style player stats for each player, and uses algorithm that minimizes skill disparity across roles for fairer matches. Features a modern React frontend on Vercel, FastAPI backend hosted on AWS, PostgreSQL data storage in Supabase, and a team balancer that leverages historical match data for optimal team composition.",
+    liveUrl: "https://league-of-legends-team-balancer.vercel.app",
+    githubUrl: "https://github.com/bbwalrus/League-of-Legends-Team-Balancer"
+  },
   {
     title: "League of Legends Team Balancer",
     image: "/assets/leaguebalancer.png",
