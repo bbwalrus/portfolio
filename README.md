@@ -1,3 +1,21 @@
 # Personal Portfolio Website
 
-Welcome to my personal portfolio website! This project showcases my skills, projects, and experiences in software development, computational finance, and computer engineering. The website is designed to highlight my professional journey, technical expertise, and the work I’m passionate about.
+An Astro portfolio showcasing my software engineering and data science projects, technologies, and background.
+
+## Local development
+
+```sh
+npm install
+npm run dev
+```
+
+Create a production build and preview it locally:
+
+```sh
+npm run build
+npm run preview
+```
+
+## Deploying to Netlify
+
+The repository includes `netlify.toml` with the Astro production build command and `dist` publish directory. In Netlify, import this project and use the project directory as the base directory; the build settings will be detected from that file. Netlify installs dependencies from `package-lock.json` and publishes the generated `dist` directory.
