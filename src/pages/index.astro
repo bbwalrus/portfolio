@@ -8,6 +8,7 @@ const pageDescription =
 const skills = {
   languages: [
     { name: "Python", icon: "python", type: "simple" },
+    { name: "Go", icon: "go", type: "simple" },
     { name: "Java", icon: "/assets/java.png", type: "custom" },
     { name: "JavaScript", icon: "javascript", type: "simple" },
     { name: "Dart", icon: "dart", type: "simple" },
@@ -44,6 +45,17 @@ const skills = {
 };
 
 const projects = [
+  {
+    title: "Distributed Competitive Matchmaker & Lobby Simulator",
+    category: "REAL-TIME SYSTEMS",
+    image: "/assets/matchmaker.png",
+    imageAlt: "Matchmaking dashboard showing live queues, match feed, and active lobbies",
+    description:
+      "A real-time matchmaking prototype built with Go, Redis, and React. The dashboard is hosted on Vercel, the Go backend on Render, and Redis on Upstash. Regional queues feed a background worker that forms ten-player matches using wait-time-based MMR tolerance, then atomically claims players with Redis Lua scripts and records match events in Redis Streams. A live dashboard shows WebSocket match updates, queue metrics, and active lobbies. Bot tickets and lobbies expire after five minutes; broadcasts come from the running backend process, so this is a showcase project rather than a production-scale, cross-instance service.",
+    tags: ["Go", "Redis", "React", "WebSockets", "Vercel", "Render", "Upstash"],
+    liveUrl: "https://bleongmatchmaker.vercel.app",
+    githubUrl: "https://github.com/bbwalrus/matchmaker",
+  },
   {
     title: "NVIDIA Stock Returns Prediction with LSTM",
     category: "DATA SCIENCE",
@@ -216,7 +228,7 @@ const skillGroups = [
               <div class="project-art project-image">
                 <img
                   src={project.image}
-                  alt={`${project.title} project screenshot`}
+                  alt={project.imageAlt ?? `${project.title} project screenshot`}
                   loading="lazy"
                   decoding="async"
                 />
